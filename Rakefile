@@ -10,7 +10,9 @@ begin
     gem.email = "miguel.vazquez@fdi.ucm.es"
     gem.homepage = "http://github.com/mikisvaz/DBcache"
     gem.authors = ["Miguel Vazquez"]
-    gem.add_development_dependency "thoughtbot-shoulda"
+
+    gem.files = ['lib/DBcache.rb']
+    gem.add_dependency('mysql')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
