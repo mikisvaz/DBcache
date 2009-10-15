@@ -1,0 +1,11 @@
+
+DBcache=/$PWD filter="*.rb Rakefile" {
+ Rakefile
+ lib=lib {
+  DBcache.rb
+ }
+ test=test {
+  DBcache_test.rb
+  test_helper.rb
+ }
+}
