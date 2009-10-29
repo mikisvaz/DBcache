@@ -6,13 +6,13 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "DBcache"
     gem.summary = %Q{Cache Hashes into Mysql}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{Creates a table and stores and retrieves de data on the hash. It can guess the best field type.}
     gem.email = "miguel.vazquez@fdi.ucm.es"
     gem.homepage = "http://github.com/mikisvaz/DBcache"
     gem.authors = ["Miguel Vazquez"]
 
     gem.files = ['lib/DBcache.rb']
-    gem.add_dependency('mysql')
+    gem.add_dependency('mysql','< 2.8')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
