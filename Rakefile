@@ -12,7 +12,7 @@ begin
     gem.authors = ["Miguel Vazquez"]
 
     gem.files = ['lib/DBcache.rb']
-    gem.add_dependency('mysql','< 2.8')
+    gem.add_dependency('mysql','>= 2.8')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
