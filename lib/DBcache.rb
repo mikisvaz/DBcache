@@ -22,6 +22,16 @@ module DBcache
     false
   end
 
+  def self.has_tables?(tables)
+    status = Hash[*tables.zip([false] * tables.length).flatten]
+    driver.query("SHOW TABLES").each{|row|
+      table = row.first
+      status[table] = true if tables.include? table
+    }
+    status
+  end
+
+
   def self.has_id?(table, id)
     driver.query("SELECT id FROM #{ table } WHERE id = #{ process(id) }").num_rows == 1
   end
